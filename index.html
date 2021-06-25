@@ -1,625 +1,486 @@
 <!DOCTYPE html>
-<html lang="ja">
+  <html lang="ja">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.scss">
-    <link rel="stylesheet" href="css/styles-re.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">    
+    <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+    <link rel="icon" href="images/heart_icon@2x.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="icon" href="images/logo.png">
-    <title>人材派遣のヒューベスト</title>
+    <title>ハートこころのクリニック</title>
   </head>
 
   <body>
 
-    <!-- ハンバーガーメニューここから -->
-    <div class="sp_nav_wrapper" id="sp_nav_wrapper">
-      <div id="screen"></div>
-      <nav id="sp_nav_menu">
-        <p>MENU</p>
-        <ul>
-          <li><a href="#">Top</a></li>
-          <li><a href="#news">お知らせ</a></li>
-          <li><a href="#service">サービス紹介</a></li>
-          <li><a href="#recruit">注目の求人</a></li>
-          <li><a href="#interview">インタビュー</a></li>
-          <li><a href="#question">よくある質問</a></li>
-        </ul>  
-      </nav>
-    </div>
-    <!-- ハンバーガーメニューここまで -->
-
     <header>
-      <!-- スマホ用ヘッダーここから -->
-      <div class="sp_header">
-
-        <div class="inner">
-          <h1><a href="#"><img src="images/ヒューベスト_ロゴ.png" alt="ヒューベストのロゴ"></a></h1>
-    
-          <!-- ハンバーガーメニューここから -->
-          <div class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <!-- ハンバーガーメニューここまで -->
-
-        </div>
-        <!-- inner -->
-
-      </div>
-      <!-- スマホ用ヘッダーここまで -->
-
-      <!-- PC用ヘッダーここから -->
-      <div class="pc_header">
-
-        <!-- pc_header_containerここから -->
-        <div class="pc_header_container">
-          <div class="inner">
-            
-            <h1><a href="#"><img src="images/ヒューベスト_ロゴ.png" alt=""></a></h1>
-            
-            <!-- ボタンの枠 -->
-            <div class="pc_btn_wrapper">
-              
-              <div class="signUp_btn btn">
-                <a href="#">登録ページで<span>無料会員登録する</span></a>
-              </div>
-              
-              <div class="login_btn btn">
-                <a href="#">すでに会員の方は<span>ログイン</span></a>
-              </div>
-              
-            </div>
-            <!-- ボタンの枠 -->
-
-          </div>
-          <!-- /inner -->
-
-        </div>
-        <!-- pc_header_containerここまで -->
-
-      </div>
-      <!-- PC用ヘッダーここまで -->
-
-      <!-- ヘッダーナビここから -->
-      <nav class="header_nav" id="header_nav">
-        <ul>
-          <li><a href="#news">お知らせ</a></li>
-          <li><a href="#service">サービス紹介</a></li>
-          <li><a href="#recruit">注目の求人</a></li>
-          <li><a href="#interview">インタビュー</a></li>
-          <li><a href="#question">よくある質問</a></li>
-        </ul>  
-      </nav>
-      <!-- ヘッダーナビここまで -->
+      <div class="inner">
         
+        <!-- info_wrapperここから -->
+        <div class="info_wrapper">
+
+          <!-- logo_wrapperここから -->
+          <div class="logo_wrapper">
+            <div class="logo_image_wrapper">
+              <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+    
+            <p>地下鉄※※線◯◯駅から北へ徒歩１分</p>
+          </div>
+          <!-- logo_wrapperここまで -->
+
+          <!-- メニューボタンここから -->
+          <div class="menu_btn tb_menu_btn show">MENU</div>
+          <div class="menu_btn sp_menu_btn show">MENU</div>
+          <!-- メニューボタンここまで -->
+          
+          <!-- reservation_containerここから -->
+          <div class="reservation_container">
+            <div class="phone_number">
+              <img src="images/phone_number.png" alt="">
+            </div>
+        
+            <!-- reservation_wrapperここから -->
+            <div class="reservation_wrapper">
+              <a href="form.html" class="btn reservation_btn">WEB予約</a>
+              <span>WEB予約は24時間受付中です。</span>
+            </div>
+            <!-- reservation_wrapperここまで -->
+    
+          </div>
+          <!-- reservation_containerここまで -->
+
+        </div>
+        <!-- info_wrapperここまで -->
+
+        <!-- sp_fixed_navここから -->
+        <div id="sp_fixed_nav">
+          <div class="sp_fix_nav">
+            <div class="logo_image_wrapper">
+              <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+      
+            <div class="menu_btn sp_menu_btn fixed_burger show">MENU</div>
+          </div>
+
+        </div>
+        <!-- sp_fixed_navここまで -->
+
+        <!--   モーダルここから -->
+        <div id="modal">
+          <div class="modal-wrapper">
+            <span id="close"><i class="fas fa-times"></i>CLOSE</span>
+            <nav id="burger_menu">
+              <!-- <span id="close"><i class="fas fa-times"></i></span> -->
+      
+              <!-- menu_wrapperここから -->
+              <div class="menu_wrapper">
+                <ul class="menu_items">
+                  <li class="menu_title">トップページメニュー</li>
+                  <li><a href="#">Top</a></li>
+                  <li><a href="#mv">クリニックからのお知らせ</a></li>
+                  <li><a href="#contents">診察内容</a></li>
+                  <li><a href="#features">当クリニックの４つの特徴</a></li>
+                  <li><a href="#about">当クリニック紹介</a></li>
+                </ul>  
+              </div>
+              <!-- menu_wrapperここまで -->
+        
+              <!-- menu_wrapperここから -->
+              <div class="menu_wrapper">
+                <ul class="menu_items">
+                  <li class="menu_title">メニュー</li>
+                  <li><a href="visitor.html">初めてお越しの方へ</a></li>
+                  <li><a href="exam.html">診察のご案内</a></li>
+                  <li><a href="about_clink.html">当クリニックについて</a></li>
+                  <li><a href="faq.html">よくあるご質問</a></li>
+                  <li><a href="access.html">アクセス</a></li>
+                </ul>  
+              </div>
+              <!-- menu_wrapperここまで -->
+        
+            </nav>
+          </div>  
+        </div>
+        <!--   モーダルここまで -->
+
+        <!--  ヘッダーの小さい方のナビここから -->
+        <nav class="header_sub_nav_wrapper">
+          <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#mv">クリニックからのお知らせ</a></li>
+            <li><a href="#contents">診察内容</a></li>
+            <li><a href="#features">当クリニックの４つの特徴</a></li>
+            <li><a href="#about">当クリニック紹介</a></li>
+          </ul>
+        </nav>
+        <!--  ヘッダーの小さい方のナビここまで -->
+      </div>
+      <!-- inner -->
+
+      <!--  ヘッダーナビここから -->
+      <nav class="header_nav_wrapper">
+        <ul>
+          <li><a href="visitor.html">初めてお越しの方へ</a></li>
+          <li><a href="exam.html">診察のご案内</a></li>
+          <li><a href="about_clink.html">当クリニックについて</a></li>
+          <li><a href="faq.html">よくあるご質問</a></li>
+          <li><a href="access.html">アクセス</a></li>
+        </ul>
+      </nav>
+      <!--  ヘッダーナビここまで -->
     </header>
 
     <main>
-      <!-- メインビジュアルここから -->
-      <div class="mv">
-        <div class="inner">
+      <div class="top_mv" id="top_mv">
 
-          <!-- 検索スペースここから -->
-          <div class="search_wrapper">
+        <article class="news_wrapper">
+          <h2 class="heading">クリニックからのお知らせ</h2>
 
-            <p><i class="fas fa-search"></i>フリーワードで検索する</p>
-            <div class="input_wrapper">
-              <input type="text" placeholder="&#xf002; 検索条件を入力">
-              <a href="#" class="search_btn btn">検索</a>
-            </div>
+          <ul class="news">
+            <li><a href="news.html"><time>2021.01.01</time>年末年始の連休について[…続きをみる]</a></li>
+            <li><a href="#"><time>2021.01.01</time>WEB予約の方法が変わりました。[…続きをみる]</a></li>
+            <li><a href="#"><time>2021.01.01</time>ホームページをリニューアルしました。[…続きをみる]</a></li>
+          </ul>
 
-            <!-- 業種 -->
-            <p><i class="fas fa-search"></i>条件を絞って検索する</p>
-            <select name="works" id="works">
-              <option value="" name="" id="">業種</option>
-              <option value="" name="" id="">選択しない</option>
-              <option value="" name="" id="">商社</option>
-              <option value="" name="" id="">流通</option>
-              <option value="" name="" id="">小売</option>
-              <option value="" name="" id="">マスコミ</option>
-              <option value="" name="" id="">IT・通信</option>
-              <option value="" name="" id="">メーカー</option>
-              <option value="" name="" id="">専門</option>
-              <option value="" name="" id="">金融・保険</option>
-              <option value="" name="" id="">不動産</option>
-              <option value="" name="" id="">建設</option>
-              <option value="" name="" id="">その他</option>
-            </select>
+          <a href="archives_news.html" class="btn arrow">過去のお知らせ</a>
 
-            <i class="fas fa-plus"></i>
-
-            <!-- 職種 -->
-            <select name="type" id="type">
-              <option value="" name="" id="">職種</option>
-              <option value="" name="" id="">選択しない</option>
-              <option value="" name="" id="">一般事務</option>
-              <option value="" name="" id="">営業</option>
-              <option value="" name="" id="">企画</option>
-              <option value="" name="" id="">マーケティング</option>
-              <option value="" name="" id="">販売・サービス</option>
-              <option value="" name="" id="">生産・製造</option>
-              <option value="" name="" id="">設計</option>
-            </select>
-
-            <i class="fas fa-plus"></i>
-
-            <!-- 地域  -->
-            <div class="region" id="pref">地域の選択<i class="fas fa-chevron-down"></i></div>
-
-            <!-- 地域のモーダルここから -->
-            <div class="map">
-
-              <!-- 日本地図 -->
-              <div class="japan_map">
-                <img src="images/map.png" alt="">
-              </div>
-
-              <!-- 地域の選択肢 -->
-              <div class="area_wrapper">
-                <span id="close"><i class="fas fa-times"></i></span> 
-                <div class="area area_1">
-                  <p class="area_title">北海道・東北</p>
-                  <ul>
-                    <li>北海道</li>
-                    <li>青森県</li>
-                    <li>岩手県</li>
-                    <li>宮城県</li>
-                    <li>秋田県</li>
-                    <li>山形県</li>
-                    <li>福島県</li>
-                  </ul>
-                </div>
-    
-                <div class="area area_2">
-                  <p class="area_title">関東</p>
-                  <ul>
-                    <li>茨城県</li>
-                    <li>栃木県</li>
-                    <li>群馬県</li>
-                    <li>埼玉県</li>
-                    <li>千葉県</li>
-                    <li>東京都</li>
-                    <li>神奈川県</li>
-                  </ul>
-                </div>
-    
-                <div class="area area_3">
-                  <p class="area_title">東海・北陸・信越</p>
-                  <ul>
-                    <li>愛知県</li>
-                    <li>岐阜県</li>
-                    <li>三重県</li>
-                    <li>静岡県</li>
-                    <li>山梨県</li>
-                    <li>石川県</li>
-                    <li>富山県</li>
-                    <li>福井県</li>
-                    <li>長野県</li>
-                    <li>新潟県</li>
-                  </ul>
-                </div>
-    
-                <div class="area area_4">
-                  <p class="area_title">関西</p>
-                  <ul>
-                    <li>滋賀県</li>
-                    <li>京都府</li>
-                    <li>大阪府</li>
-                    <li>兵庫県</li>
-                    <li>奈良県</li>
-                    <li>和歌山県</li>
-                  </ul>
-                </div>
-
-                <div class="area area_5">
-                  <p class="area_title">中国</p>
-                  <ul>
-                    <li>岡山県</li>
-                    <li>広島県</li>
-                    <li>鳥取県</li>
-                    <li>島根県</li>
-                    <li>山口県</li>
-                  </ul>
-                </div>
-
-                <div class="area area_6">
-                  <p class="area_title">四国</p>
-                  <ul>
-                    <li>徳島県</li>
-                    <li>香川県</li>
-                    <li>愛媛県</li>
-                    <li>高知県</li>
-                  </ul>
-                </div>
-
-                <div class="area area_7">
-                  <p class="area_title">九州</p>
-                  <ul>
-                    <li>福岡県</li>
-                    <li>佐賀県</li>
-                    <li>長崎県</li>
-                    <li>熊本県</li>
-                    <li>大分県</li>
-                    <li>宮崎県</li>
-                    <li>鹿児島県</li>
-                    <li>沖縄県</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- 地域の選択肢ここまで -->
-
-            </div>
-            <!-- 地域のモーダルここまで -->
-
-            <p class="result">検索結果は<input type="text" class="result_area">件です</p>
-            <a href="#" class="go_result_btn btn">検索結果へ</a>
-            <div class="others">
-              その他の求人を探す場合は<a href="#">コチラ</a><i class="fas fa-chevron-right"></i>
-            </div>
-          </div>
-          <!-- 検索スペースここまで -->
-
-        </div>
+        </article>
       </div>
-      <!-- メインビジュアルここまで -->
 
-      <!-- お知らせここから -->
-      <section class="news" id="news">
-
+      <section class="contents" id="contents">
         <div class="inner">
 
-          <h2 class="section_title">お知らせ<span class="en_title">News</span></h2>
-
-          <!-- news_listここから -->
-          <ul class="news_list">
-            <li><a href="#"><time>2021年01月01日</time>転職イベントに参加いたします</a></li>
-            <li><a href="#"><time>2021年01月01日</time>来月より新CMが全国で放映されます</a></li>
-            <li><a href="#"><time>2021年01月01日</time>メディア掲載情報があります</a></li>
-            <li><a href="#"><time>2021年01月01日</time>2023年卒業予定の方向けサイトがオープンしました</a></li>
-            <li><a href="#"><time>2021年01月01日</time>サイトリニューアルのお知らせ</a></li>
-          </ul>
-          <!-- news_listここまで -->
-
-        </div>
-        <!-- /inner -->
-      </section>
-      <!-- お知らせここまで -->
-
-      <!-- サービスここから -->
-      <section class="service" id="service"> 
-        <div class="inner">
-
-          <h2 class="section_title">サービス紹介<span class="en_title">Service</span></h2>
-
-          <div class="service_item_container">
-
-            <!-- service_itemここから -->
-            <div class="service_item">
-              
-              <div class="service_image_wrapper">
-                <img src="images/building.jpg" alt="ビルの画像">
-              </div>
-              
-              <ul class="service_text_wrapper">
-                <li class="text_heading">地元の大手企業の採用に強み</li>
-                <li>ご存知の方も多いように、この地方には世界的に有名な老舗大手企業や有名な観光地、世界遺産が多数あります。そのような誰もが知る企業の求人が多数あるのが当社の強みです。</li>
-              </ul>
-            </div>
-            <!-- service_itemここまで -->
-
-            <!-- service_itemここから -->
-            <div class="service_item">
-              <div class="service_image_wrapper">
-                <img src="images/work_woman.jpg" alt="働く女性の画像">
-              </div>
-      
-              <ul class="service_text_wrapper">
-                <li class="text_heading">女性活躍中の職場が増えています</li>
-                <li>結婚、出産などのライフイベントのみならず、産休や育休など女性に安心の手厚い待遇やお子様の急病時のケアなどにも安心して働くことができるお仕事が多数揃っています。</li>
-              </ul>
-            </div>
-            <!-- service_itemここまで -->
+          <h2 class="section_heading heading">診察内容</h2>
     
-            <!-- service_itemここから -->
-            <div class="service_item">
-              <div class="service_image_wrapper">
-                <img src="images/education.jpg" alt="人材教育の画像">
+          <div class="contents_wrapper">
+            <h3>このような症状がありませんか？</h3>
+    
+            <div class="contents_items_wrapper">
+              <ul class="contents_item">
+                <li class="contents_item_title">異常に緊張する</li>
+                <li class="contents_item_image"><img src="images/exam_1.png" alt=""></li>
+                <li class="contents_item_more"><a href="single.html" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">なんだか息苦しい</li>
+                <li class="contents_item_image"><img src="images/exam_2.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">不安に感じる</li>
+                <li class="contents_item_image"><img src="images/exam_7.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">やる気が起こらない</li>
+                <li class="contents_item_image"><img src="images/exam_6.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">激しい動悸がする</li>
+                <li class="contents_item_image"><img src="images/exam_3.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">なかなか眠れない</li>
+                <li class="contents_item_image"><img src="images/exam_4.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">記憶力に自信がない</li>
+                <li class="contents_item_image"><img src="images/exam_5.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+              <ul class="contents_item">
+                <li class="contents_item_title">女性特有の症状</li>
+                <li class="contents_item_image"><img src="images/exam_9.png" alt=""></li>
+                <li class="contents_item_more"><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>くわしく見る</a></li>
+              </ul>
+    
+            </div>
+            <!-- contents_items_wrapper -->
+          </div>
+          <!-- contents_wrapper -->
+
+        
+          <div class="middle_info">
+            <p>一人で悩まず気楽に<br>ご相談ください</p>
+
+            <div class="reservation_container">
+
+              <div class="phone_number">
+                <img src="images/phone_number.png" alt="">
               </div>
       
-              <ul class="service_text_wrapper">
-                <li class="text_heading">独自の人材教育システム</li>
-                <li>いきなり勤務先に飛び込むのが不安な方も安心の資格取得対策やビジネスマナーなどの教育システムも充実しており、自分に自信をつけて働き始めることもできます。</li>
-                <li><a href="#" class="btn">サポート内容を見る</a></li>
-              </ul>
+              <div class="reservation_wrapper">
+                <div class="btn reservation_btn">
+                  <a href="form.html">WEB予約</a>
+                </div>
+                <span>WEB予約は24時間受付中です。</span>
+              </div>
+              <!-- reservation_wrapper -->
 
             </div>
-            <!-- service_itemここまで -->
+            <!-- reservation_container -->
 
           </div>
-          <!-- service_item_container -->
-        </div>
-      </section>
-      <!-- サービスここまで -->
-
-      <!-- 注目の求人ここから -->
-      <section class="recruit" id="recruit"> 
-        <div class="inner">
+          <!-- middle_info -->
           
+        </div>
+        <!-- inner -->
+      </section>
+      <!-- contents -->
+      
+      <section class="features" id="features">
+        <div class="inner">
+          <h2 class="section_heading heading">当クリニックの４つの特徴</h2>
+    
+          <div class="features_item_wrapper">
 
-          <h2 class="section_title">注目の求人<span class="en_title">Recruit</span></h2>
+            <!-- features_itemここから -->
+            <div class="features_item">
+              <h3 class="features_title"><span>1</span>.患者様ひとりひとりに寄り添った診察</h3>
 
-          <!-- recruit_containerここから -->
-          <div class="recruit_container">
+
+              <!-- features_image_wrapperここから -->
+              <div class="features_image_wrapper">
+
+                <div class="features_image">
+                  <img src="images/features_1.png" alt="">
+                </div>
+
+                <div class="features_text_wrapper">
+                  <p class="features_text">コミュニーケーションを取る事で患者様ひとりひとりにあった治療法を提案します。</p>
+                </div>
+                <!-- features_text_wrapper -->
+
+              </div>
+              <!-- features_image_wrapperここまで -->
+
+            </div>
+            <!-- features_itemここまで -->
+
+            <div class="features_item">
+              <h3 class="features_title"><span>2</span>.薬に頼りすぎない根本的な解決</h3>
+
+              <div class="features_image_wrapper">
+
+                <div class="features_image">
+                  <img src="images/features_2.png" alt="">
+                </div>
+
+                <div class="features_text_wrapper">
+                  <p class="features_text">薬に頼りすぎず、根治をめざす治療法をご提案させていただきます。</p>
+                </div>
+                <!-- features_text_wrapper -->
+
+              </div>
+              <!-- features_image_wrapper -->
+
+            </div>
+            <!-- features_item -->
+
+            <div class="features_item">
+              <h3 class="features_title"><span>3</span>.患者様のプライバシーを最大限お守りします</h3>
+
+              <div class="features_image_wrapper">
+
+                <div class="features_image">
+                  <img src="images/features_3.png" alt="">
+                </div>
+
+                <div class="features_text_wrapper">
+                  <p class="features_text">患者様のプライバシーを最大限にお守りすることはもちろんのこと、他の患者様とのプライバシーも取ることも心がけています。</p>
+                </div>
+                <!-- features_text_wrapper -->
+
+              </div>
+              <!-- features_image_wrapper -->
+
+            </div>
+            <!-- features_item -->
+
+            <div class="features_item">
+              <h3 class="features_title"><span>4</span>.患者様がリラックスできる環境づくり</h3>
+
+              <div class="features_image_wrapper">
+
+                <div class="features_image">
+                  <img src="images/features_4.png" alt="">
+                </div>
+
+                <div class="features_text_wrapper">
+                  <p class="features_text">患者様の不安を少しでも減らすためリラックスできる環境づくりをしております。</p>
+                </div>
+                <!-- features_text_wrapper -->
+
+              </div>
+              <!-- features_image_wrapper -->
+
+            </div>
+            <!-- features_item -->
+
+          </div>
+          <!-- features_wrapper -->
+
+        </div>
+        <!-- inner -->
+        
+      </section>
+      <!-- features -->
+      
+      <section class="about" id="about">
+        <h2 class="section_heading heading">当クリニック紹介</h2>
+
+        <div class="inner">
+          <div class="about_wrapper">
+
+            <!-- about_clinicここから -->
+            <div class="about_clinic">
+              <h3>ハートこころのクリニック</h3>
+      
+              <table class="address_table">
+                <tbody>
+                  <tr><td class="table_label">住所</td><td class="table_content">愛知県名古屋市〇〇区〇〇町</td></tr>
+                  <tr><td class="table_label">電話番号</td><td class="table_content">052-1234-5678</td></tr>
+                  <tr><td class="table_label">休診日</td><td class="table_content">土曜午後・日曜・祝日</td></tr>
+                  <tr><td class="table_label">診療科目</td><td class="table_content">診療内科・精神科</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- about_clinicここまで -->
+
+            <!-- time_table_wrapperここから -->
+            <div class="time_table_wrapper">
+              <!-- 診察時間ここから -->
+              <table class="time_table" border="1">
+                <tr>
+                  <th>診察時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th>
+                </tr>
+
+                <tr>
+                  <td>9:30〜13:00</td><td>◯</td><td>◯</td><td>◯</td><td>／</td><td>◯</td><td>◎</td><td>／</td>
+                </tr>
+
+                <tr>
+                  <td>15:30〜18:30</td><td>◯</td><td>◯</td><td>◯</td><td>／</td><td>◯</td><td>／</td><td>／</td>
+                </tr>
+              </table>
+              <p class="attention">※土曜日は14:00までの診察です。</p>
+              <!-- 診察時間ここまで -->
+            </div>
+            <!-- time_table_wrapperここまで -->
+
             
-            <!-- 求人のアイテム -->
-            <a href="#" class="recruit_item_wrapper btn_effect">
-              <div class="icon_wrapper">
-                <img src="images/pop_new-1.png" alt="newのイラスト">
-              </div>
-
-              <!-- recruit_text_wrapperここから -->
-              <div class="recruit_text_wrapper">
-                <p class="recruit_title">新規求人</p>
-                <p class="more">求人を見る<i class="fas fa-chevron-right"></i></p>
-              </div>
-              <!-- recruit_text_wrapperここまで -->
-            </a> 
-            <!-- 求人のアイテム -->
-
-            <!-- 求人のアイテム -->
-            <a href="#" class="recruit_item_wrapper btn_effect">
-              <div class="icon_wrapper">
-                <img src="images/shinsyakaijin_man2-1.png" alt="新社会人のイラスト">
-              </div>
-
-              <!-- recruit_text_wrapperここから -->
-              <div class="recruit_text_wrapper">
-                <p class="recruit_title">第二新卒の方向けのお仕事</p>
-                <p class="more">求人を見る<i class="fas fa-chevron-right"></i></p>
-              </div>
-              <!-- recruit_text_wrapperここまで -->
-            </a> 
-            <!-- 求人のアイテム -->
-
-            <!-- 求人のアイテム -->
-            <a href="#" class="recruit_item_wrapper btn_effect">
-              <div class="icon_wrapper">
-                <img src="images/syukatsu_jiko_appeal_woman.png" alt="女性のイラスト">
-              </div>
-
-              <!-- recruit_text_wrapperここから -->
-              <div class="recruit_text_wrapper">
-                <p class="recruit_title">女性活躍中のお仕事</p>
-                <p class="more">求人を見る<i class="fas fa-chevron-right"></i></p>
-              </div>
-              <!-- recruit_text_wrapperここまで -->
-            </a> 
-            <!-- 求人のアイテム -->
-
-            <!-- 求人のアイテム -->
-            <a href="#" class="recruit_item_wrapper btn_effect">
-              <div class="icon_wrapper">
-                <img src="images/nagoyajou.png" alt="お城のイラスト">
-              </div>
-
-              <!-- recruit_text_wrapperここから -->
-              <div class="recruit_text_wrapper">
-                <p class="recruit_title">地元密着のお仕事</p>
-                <p class="more">求人を見る<i class="fas fa-chevron-right"></i></p>
-              </div>
-              <!-- recruit_text_wrapperここまで -->
-            </a> 
-            <!-- 求人のアイテム -->
-
-            <!-- 求人のアイテム -->
-            <a href="#" class="recruit_item_wrapper btn_effect">
-              <div class="icon_wrapper">
-                <img src="images/syoshinsya_mark.png" alt="初心者マークのイラスト">
-              </div>
-
-              <!-- recruit_text_wrapperここから -->
-              <div class="recruit_text_wrapper">
-                <p class="recruit_title">未経験者歓迎のお仕事</p>
-                <p class="more">求人を見る<i class="fas fa-chevron-right"></i></p>
-              </div>
-              <!-- recruit_text_wrapperここまで -->
-            </a> 
-            <!-- 求人のアイテム -->
-
-            <!-- 求人のアイテム -->
-            <a href="#" class="recruit_item_wrapper btn_effect">
-              <div class="icon_wrapper">
-                <img src="images/business_online_syoudan_uchiawase.png" alt="リモートワークのイラスト">
-              </div>
-
-              <!-- recruit_text_wrapperここから -->
-              <div class="recruit_text_wrapper">
-                <p class="recruit_title">在宅勤務OKのお仕事</p>
-                <p class="more">求人を見る<i class="fas fa-chevron-right"></i></p>
-              </div>
-              <!-- recruit_text_wrapperここまで -->
-            </a> 
-            <!-- 求人のアイテム -->
 
           </div>
-          <!-- recruit_containerここまで -->
-          <a href="#"  class="btn">その他の求人を見る</a>
+          <!-- about_wrapper -->
 
-        </div>
-      </section>
-      <!-- 注目の求人ここまで -->
-
-      <!-- インタビューここから -->
-      <section class="interview" id="interview"> 
-        <div class="inner">
-          <h2 class="section_title">インタビュー<span class="en_title">Interview</span></h2>
+          <div class="access_wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.4265663121873!2d136.87934285111345!3d35.17091936529942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1622537066185!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     
-          <div class="interview_container">
-
-            <!-- インタビュー１ -->
-            <ul class="interview_wrapper">
-              <li class="interview_image"><img src="images/person_1.png" alt="男性の画像"></li>
-              <li class="interview_name">山田 太郎</li>
-              <li class="interview_content">地元の企業の求人が沢山あることはWebサイトに書いてありましたが、実際に会員登録してみるとこんなにもあるのかと正直驚きました。<br>その後エージェントの方と面談を繰り返し自分をスカウトして頂いた某企業で勤務しております。</li>
-              <li class="label">CASE 1</li>
-            </ul>
-    
-            <!-- インタビュー２ -->
-            <ul class="interview_wrapper">
-              <li class="interview_image"><img src="images/person_2.png" alt="男性Bの画像"></li>
-              <li class="interview_name">山田 次郎</li>
-              <li class="interview_content">自分に何が会うか悩んでいた時にエージェントの方に相談に乗ってもらいました。自分に自信がつきどこの会社でも「やっていける」と思えるようになりました。</li>
-              <li class="label">CASE 2</li>
-            </ul>
-    
-            <!-- インタビュー３ -->
-            <ul class="interview_wrapper">
-              <li class="interview_image"><img src="images/person_3.png" alt="女性の画像"></li>
-              <li class="interview_name">山田 花子</li>
-              <li class="interview_content">子供がまだ小さいですが働ける職場を探していました。こちらの求人は女性に優しい求人が多く、今の会社では子供の急な病気で休んだ際も周りの方々に助けていただきました。このようなアットホームな職場を紹介していただき大変感謝しています。</li>
-              <li class="label">CASE 3</li>
-            </ul>
+            <h4><i class="fas fa-subway"></i>地下鉄でお越しの方へ</h4>
+            <p>地下鉄※※線◯◯駅下車2番出口から北へ徒歩１分</p>
+            <h4><i class="fas fa-car"></i>お車でお越しの方へ</h4>
+            <p>当クリニックは駐車場がございます。<br>満車の場合は契約駐車場がございますので受付にお申し付けください。<br>駐車券をお渡しいたします。</p>
+            <a href="access.html">駐車場の詳細はこちら</a>
+          
           </div>
-        </div>
-      </section>
-      <!-- インタビューここまで -->
-
-      <!-- よくある質問ここから -->
-      <section class="question" id="question"> 
-        <div class="inner">
-          <h2 class="section_title">よくある質問<span class="en_title">FAQ</span></h2>
-
-          <ul class="faq_wrapper">
-
-            <!-- 質問１ -->
-            <li>
-              <p class="q">Q.会員登録するメリットはありますか？</p>
-              <p class="answer">A.無料で会員登録をしていただくことでことで会員様限定スカウトを受け取ることができます。<br>他にも転職のためのサポートを多数受けることができます。</p>
-            </li>
-
-            <!-- 質問２ -->
-            <li>
-              <p class="q">Q.自分に合う仕事がわかりません</p>
-              <p class="answer">A.適正診断を受けていただくことで会員様ひとりひとりの適正に合ったお仕事を紹介することができます。<br>また不安がある場合はその道のエキスパートとの面談やあると役立つ資格などを直接相談できる機会を設けております。</p>
-            </li>
-
-            <!-- 質問3 -->
-            <li>
-              <p class="q">Q.登録したらメールや電話はしてきますか？</p>
-              <p class="answer">A.当社からの連絡は規定で一切することはありませんのでご安心ください。<br>逆に会員様からのご相談には全力で答えさせていただきます。</p>
-            </li>
-
-          </ul>
-
-          <p class="guide">まずは会員登録！</p>
-          <a href="#" class="signUp_btn btn">無料会員登録する</a>
 
         </div>
         <!-- inner -->
       </section>
-      <!-- よくある質問ここまで -->
+      
     </main>
 
     <footer>
       <div class="inner">
-
-        <!-- スマホ用フッターここから -->
-        <div class="sp_only_footer_wrapper">
-          <nav class="sp_footer_nav">
-            <ul class="footer_menu">
-              <li><a href="#">お知らせ</a></li>
-              <li><a href="#">サービス紹介</a></li>
-              <li><a href="#">注目の求人</a></li>
-              <li><a href="#">お問い合わせ</a></li>
-              <li><a href="#">会社概要</a></li>
-              <li><a href="#">プライバシーポリシー</a></li>
-              <li><a href="#">サイトマップ</a></li>
-              <li><a href="#">掲載希望の企業様</a></li>
-            </ul>
-          </nav>
-
-          <div class="footer_info_wrapper">
-            <div class="footer_logo_wrapper">
+        <div class="info_wrapper">
+          <div class="logo_wrapper">
+            <div class="logo_image_wrapper">
               <a href="#">
-                <img src="images/ヒューベスト_ロゴ.png" alt="ヒューベストのロゴ">
+                <img src="images/logo.png" alt="">
+
               </a>
             </div>
-  
-            <ul class="info">
-              <li>〒000-0000</li>
-              <li>愛知県名古屋市〇〇区××ビル15階</li>
-              <li>TEL : 052-1234-5678</li>
-              <li>平日10:00〜17:00</li>
-              <li>休日 土曜・日曜</li>
-            </ul>
+    
+            <p>地下鉄※※線◯◯駅から北へ徒歩１分</p>
           </div>
-        </div>
-        <!-- スマホ用フッターここまで -->
-
-
-        <!-- pc用フッターここから -->
-        <div class="pc_only_footer_wrapper">
-
-          <nav class="pc_footer_nav">
-            
-            <ul class="info">
-              <li><img src="images/ヒューベスト_ロゴ.png" alt="ヒューベストのロゴ"></li>
-              <li>〒000-0000</li>
-              <li>愛知県名古屋市〇〇区××ビル15階</li>
-              <li>TEL : 052-1234-5678</li>
-              <li>平日10:00〜17:00</li>
-              <li>休日 土曜・日曜</li>
-            </ul>
-  
-            <ul class="footer_news">
-              <li class="list_title">お知らせ</li>
-              <li><a href="#news">転職イベントに参加いたします</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#news">来月より新CMが全国で放映されます</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#news">メディア掲載情報があります</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#news">2023年卒業予定の方向けサイトがオープンしました</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#news">サイトリニューアルのお知らせ</a><i class="fas fa-chevron-right"></i></li>
-            </ul>
-  
-            <ul class="footer_recruit">
-              <li class="list_title">注目の求人</li>
-              <li><a href="#recruit">新着求人</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#recruit">新卒・第二新卒の方向けのお仕事</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#recruit">女性活躍中のお仕事</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#recruit">地元密着のお仕事</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#recruit">未経験者歓迎のお仕事</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#recruit">在宅勤務OKのお仕事</a><i class="fas fa-chevron-right"></i></li>
-            </ul>
-          </nav>
-
-          <ul class="footer_menu">
-            <li><a href="#">サイトマップ</a></li>
-            <li><a href="#">サービス紹介</a></li>
-            <li><a href="#">会社概要</a></li>
-            <li><a href="#">掲載希望の企業様</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
-          </ul>
-          <!-- pc用フッターここまで -->
-        </div>
+          <!-- logo_wrapper -->
+          
+          <div class="reservation_container">
+            <div class="phone_number">
+              <img src="images/phone_number.png" alt="">
+            </div>
         
-        <p class="copy">&copy 株式会社ヒューベスト2021</p>
+            <div class="reservation_wrapper">
+              <div class="btn reservation_btn">
+                <a href="form.html">WEB予約</a>
+              </div>
+              <span>WEB予約は24時間受付中です。</span>
+            </div>
+            <!-- reservation_wrapper -->
+            
+          </div>
+          <!-- reservation_container -->
+          
+        </div>
+        <!-- info_wrapper -->
+
+        <p class="footer_menu_title">トップページメニュー</p>
+        <ul class="footer_menu">
+          <li><a href="#" class="round"><span><i class="fas fa-caret-right"></i></span>Topへ</a></li>
+          <li><a href="#top_mv" class="round"><span><i class="fas fa-caret-right"></i></span>クリニックからのお知らせ</a></li>
+          <li><a href="#contents" class="round"><span><i class="fas fa-caret-right"></i></span>診察内容</a></li>
+          <li><a href="#features" class="round"><span><i class="fas fa-caret-right"></i></span>当クリニックの４つの特徴</a></li>
+          <li><a href="#about" class="round"><span><i class="fas fa-caret-right"></i></span>当クリニック紹介</a></li>
+        </ul>
+
+        <p class="footer_menu_title">メニュー</p>
+        <ul class="footer_menu">
+          <li><a href="visitor.html" class="round"><span><i class="fas fa-caret-right"></i></span>初めてお越しの方へ</a></li>
+          <li><a href="exam.html" class="round"><span><i class="fas fa-caret-right"></i></span>診察のご案内</a></li>
+          <li><a href="about_clink.html" class="round"><span><i class="fas fa-caret-right"></i></span>当クリニックについて</a></li>
+          <li><a href="faq.html" class="round"><span><i class="fas fa-caret-right"></i></span>よくあるご質問</a></li>
+          <li><a href="access.html" class="round"><span><i class="fas fa-caret-right"></i></span>アクセス</a></li>
+        </ul>
+
+        <p class="copy">&copyハートこころのクリニック</p>
       </div>
-      <div class="to_top" id="to_top"><a href="#"><i class="fas fa-chevron-up"></i>Top</a></div>
-
+      <!-- inner -->
+      
     </footer>
+    <!-- sp_reservation_containerここから -->
+    <div class="sp_reservation_container">
+      <div class="sp_phone_number_wrapper sp_footer">
+        <a href="#">
+          <p>お電話でのご予約</p>
+          <p><i class="fas fa-phone-alt"></i>052-123-4567</p>
+        </a>
+      </div>
 
-    <!-- スマホ用固定フッターここから -->
-    <div class="sp_fixed_footer_wrapper">
+      <!-- sp_reservation_wrapperここから -->
+      <div class="sp_reservation_wrapper sp_footer">
+        <div class="sp_reservation_btn">
+          <a href="form.html">WEB予約</a>
+        </div>
+      </div>
+      <!-- sp_reservation_wrapperここまで -->
 
-      <a href="#" class="signUp_btn btn">登録ページで<span>無料会員登録する</span></a>
-
-      <a href="#" class="login_btn btn">すでに会員の方は<span>ログインする</span></a>
     </div>
-    <!-- スマホ用固定フッターここから -->
+    <!-- sp_reservation_containerここまで -->
     <script src="js/main.js"></script>
   </body>
 </html>
+
