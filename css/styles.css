@@ -242,13 +242,14 @@ section:nth-of-type(even) {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 120%;
   min-height: 100%;
   z-index: 10;
   -webkit-transition: all .4s;
   transition: all .4s;
+  overflow-y: scroll;
 }
 
 .sp_nav_wrapper ul li:first-child {
@@ -565,6 +566,7 @@ header .pc_header, header .header_nav {
   border: 1px solid #707070;
   font-size: 0.875rem;
   height: 40px;
+  background-color: #fff;
 }
 
 .mv .search_wrapper .search_btn {
@@ -1420,6 +1422,12 @@ footer .pc_only_footer_wrapper {
   display: none;
 }
 
+@media (min-width: 575px) {
+  footer {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: 800px) {
   footer {
     padding: 30px 0;
@@ -1506,7 +1514,7 @@ footer .pc_only_footer_wrapper {
   opacity: .6;
   border-radius: 50%;
   position: fixed;
-  bottom: 14%;
+  bottom: 90px;
   right: 0;
 }
 
@@ -1531,7 +1539,7 @@ footer .pc_only_footer_wrapper {
   .to_top {
     width: 60px;
     height: 60px;
-    bottom: 10%;
+    bottom: 10px;
     right: 0;
   }
   .to_top a {
@@ -1546,8 +1554,6 @@ footer .pc_only_footer_wrapper {
   .to_top {
     width: 80px;
     height: 80px;
-    bottom: 0;
-    right: 0;
   }
   .to_top a {
     font-size: 1rem;
