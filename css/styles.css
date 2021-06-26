@@ -171,6 +171,7 @@ section:nth-of-type(even) {
   height: 50px;
   border-radius: 5px;
   z-index: 11;
+  border: 1px solid yellow;
   /* クリック後の動き */
 }
 
@@ -179,41 +180,49 @@ section:nth-of-type(even) {
   -webkit-transition: all .4s;
   transition: all .4s;
   position: absolute;
-  left: 14px;
+  left: 14%;
   height: 2px;
   border-radius: 5px;
   background: #fff;
-  width: 45%;
+  background: gold;
+  width: 70%;
+  -webkit-transform: rotateY(-50%);
+          transform: rotateY(-50%);
 }
 
 .burger span:nth-of-type(1) {
   top: 13px;
+  top: 18%;
 }
 
 .burger span:nth-of-type(2) {
   top: 19px;
+  top: 41%;
 }
 
 .burger span:nth-of-type(3) {
   top: 25px;
+  top: 64%;
 }
 
 .burger span:nth-of-type(3)::after {
   content: "Menu";
+  display: block;
   position: absolute;
   top: 5px;
   left: -5px;
+  left: 0%;
   color: #fff;
   font-size: 0.375rem;
   text-transform: uppercase;
 }
 
 .burger.active span:nth-of-type(1) {
-  top: 14px;
-  left: 18px;
+  top: 30%;
+  left: 14%;
   -webkit-transform: translateY(6px) rotate(-45deg);
           transform: translateY(6px) rotate(-45deg);
-  width: 30%;
+  width: 70%;
 }
 
 .burger.active span:nth-of-type(2) {
@@ -221,19 +230,19 @@ section:nth-of-type(even) {
 }
 
 .burger.active span:nth-of-type(3) {
-  top: 26px;
-  left: 18px;
+  top: 53%;
+  left: 14%;
   -webkit-transform: translateY(-6px) rotate(45deg);
           transform: translateY(-6px) rotate(45deg);
-  width: 30%;
+  width: 70%;
 }
 
 .burger.active span:nth-of-type(3)::after {
   content: "Close";
   -webkit-transform: translateY(0) rotate(-45deg);
           transform: translateY(0) rotate(-45deg);
-  top: 5px;
-  left: 0px;
+  top: 7px;
+  left: 40%;
 }
 
 /* ハンバーガーメニュー */
@@ -315,53 +324,29 @@ section:nth-of-type(even) {
 @media (min-width: 575px) {
   /* バーガーアイコン */
   .burger {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     /* クリック後の動き */
-  }
-  .burger span {
-    left: 14px;
-    height: 2px;
-    width: 80%;
-  }
-  .burger span:nth-of-type(1) {
-    top: 7px;
-  }
-  .burger span:nth-of-type(2) {
-    top: 16px;
-  }
-  .burger span:nth-of-type(3) {
-    top: 25px;
   }
   .burger span:nth-of-type(3)::after {
     position: absolute;
-    top: 6px;
-    left: -3px;
     font-size: 0.875rem;
   }
   .burger.active span:nth-of-type(1) {
-    top: -1px;
-    left: 0px;
     -webkit-transform: translateY(6px) rotate(-45deg);
             transform: translateY(6px) rotate(-45deg);
-    width: 70%;
   }
   .burger.active span:nth-of-type(2) {
     opacity: 0;
   }
   .burger.active span:nth-of-type(3) {
-    top: 10px;
-    left: 0px;
     -webkit-transform: translateY(-6px) rotate(45deg);
             transform: translateY(-6px) rotate(45deg);
-    width: 70%;
   }
   .burger.active span:nth-of-type(3)::after {
     content: "Close";
     -webkit-transform: translateY(0) rotate(-45deg);
             transform: translateY(0) rotate(-45deg);
-    top: 7px;
-    left: 8px;
   }
   /* スマホ用の固定フッター */
   .sp_fixed_footer_wrapper {
