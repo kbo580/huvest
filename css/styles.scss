@@ -188,7 +188,7 @@ section{
   height:50px;
   border-radius: 5px;
   z-index: 11;
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
 
   span{
     display: inline-block;
@@ -198,22 +198,18 @@ section{
     height: 2px;
     border-radius: 5px;
     background: #fff;
-    background: gold;
     width: 70%;
     transform: rotateY(-50%);
 
     &:nth-of-type(1){
-      top:13px;
       top:18%;
     }
 
     &:nth-of-type(2){
-      top:19px;
       top:41%;
     }
 
     &:nth-of-type(3){
-      top:25px;
       top:64%;
       
       &::after{
@@ -221,12 +217,10 @@ section{
         display: block;
         position: absolute;
         top:5px;
-        left: -5px;
         left: 0%;
         color: #fff;
-        font-size: rem(10);
+        font-size: 70%;
         text-transform: uppercase;
-        // display: none;
       }
     }
   }
@@ -255,7 +249,6 @@ section{
     transform: translateY(0) rotate(-45deg);
     top:7px;
     left:40%;
-    // display: none;
   }
 }
 
@@ -341,36 +334,36 @@ section{
       &:nth-of-type(3){
         
         &::after{
-          position: absolute;
-          font-size: rem(14);
+        left: 4%;
+        font-size: 80%;
         }
       }
     }
   
     /* クリック後の動き */
-    &.active span:nth-of-type(1) {
-      transform: translateY(6px) rotate(-45deg);
-      top: 30%;
-      left: 14%;
-    }
-    
-    &.active span:nth-of-type(2) {
-      opacity: 0;
-    }
   
     &.active span:nth-of-type(3){
-      top: 30%;
-      left: 14%;
-      transform: translateY(-6px) rotate(45deg);
-
+      top: 49%;
     }
   
     &.active span:nth-of-type(3)::after {
-      content:"Close";
-      transform: translateY(0) rotate(-45deg);
-      top: 30%;
-      left: 14%;
-      display: none;
+      top: 12px;
+      left: 45%;
+    }
+  }
+
+  /* ハンバーガーメニュー */
+  .sp_nav_wrapper{
+
+    ul{
+      li{
+        a{
+          padding: 40px 16px;
+        }
+      }
+    }
+    p{
+      padding: 24px 0;
     }
   }
 

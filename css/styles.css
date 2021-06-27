@@ -171,7 +171,6 @@ section:nth-of-type(even) {
   height: 50px;
   border-radius: 5px;
   z-index: 11;
-  border: 1px solid yellow;
   /* クリック後の動き */
 }
 
@@ -184,24 +183,20 @@ section:nth-of-type(even) {
   height: 2px;
   border-radius: 5px;
   background: #fff;
-  background: gold;
   width: 70%;
   -webkit-transform: rotateY(-50%);
           transform: rotateY(-50%);
 }
 
 .burger span:nth-of-type(1) {
-  top: 13px;
   top: 18%;
 }
 
 .burger span:nth-of-type(2) {
-  top: 19px;
   top: 41%;
 }
 
 .burger span:nth-of-type(3) {
-  top: 25px;
   top: 64%;
 }
 
@@ -210,10 +205,9 @@ section:nth-of-type(even) {
   display: block;
   position: absolute;
   top: 5px;
-  left: -5px;
   left: 0%;
   color: #fff;
-  font-size: 0.625rem;
+  font-size: 70%;
   text-transform: uppercase;
 }
 
@@ -329,31 +323,22 @@ section:nth-of-type(even) {
     /* クリック後の動き */
   }
   .burger span:nth-of-type(3)::after {
-    position: absolute;
-    font-size: 0.875rem;
-  }
-  .burger.active span:nth-of-type(1) {
-    -webkit-transform: translateY(6px) rotate(-45deg);
-            transform: translateY(6px) rotate(-45deg);
-    top: 30%;
-    left: 14%;
-  }
-  .burger.active span:nth-of-type(2) {
-    opacity: 0;
+    left: 4%;
+    font-size: 80%;
   }
   .burger.active span:nth-of-type(3) {
-    top: 30%;
-    left: 14%;
-    -webkit-transform: translateY(-6px) rotate(45deg);
-            transform: translateY(-6px) rotate(45deg);
+    top: 49%;
   }
   .burger.active span:nth-of-type(3)::after {
-    content: "Close";
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
-    top: 30%;
-    left: 14%;
-    display: none;
+    top: 12px;
+    left: 45%;
+  }
+  /* ハンバーガーメニュー */
+  .sp_nav_wrapper ul li a {
+    padding: 40px 16px;
+  }
+  .sp_nav_wrapper p {
+    padding: 24px 0;
   }
   /* スマホ用の固定フッター */
   .sp_fixed_footer_wrapper {
