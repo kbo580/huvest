@@ -49,7 +49,7 @@ body {
   color: #333;
   font-size: 1.125rem;
   display: block;
-  border: 1px solid #5C5C5C;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
@@ -67,6 +67,7 @@ body {
   font-weight: bold;
   -webkit-transition: all .4s;
   transition: all .4s;
+  border: 1px solid #5C5C5C;
 }
 
 .signUp_btn:hover {
@@ -79,6 +80,7 @@ body {
   font-weight: normal;
   -webkit-transition: all .4s;
   transition: all .4s;
+  border: 1px solid #5C5C5C;
 }
 
 .login_btn:hover {
@@ -512,8 +514,8 @@ header .pc_header, header .header_nav {
   background-color: rgba(212, 233, 244, 0.8);
   border-radius: 6px;
   width: 100%;
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 8px 16px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 8px 16px 10px rgba(0, 0, 0, 0.2);
   /* インプット系パーツ */
   /* 検索ボタン */
   /* 条件入力欄 */

@@ -61,7 +61,7 @@ body {
   color: $textColorA;
   font-size: rem(18);
   display: block;
-  border: 1px solid $textColorC;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   text-align: center;
@@ -76,6 +76,7 @@ body {
   background-color: $accentColor;
   font-weight: bold;
   transition: all .4s;
+  border: 1px solid $textColorC;
 
   &:hover{
     background-color: $textColorA;
@@ -87,6 +88,7 @@ body {
   background-color: #fff;
   font-weight: normal;
   transition: all .4s;
+  border: 1px solid $textColorC;
 
   &:hover{
     background-color: $subColor;
@@ -534,7 +536,7 @@ header{
     background-color: rgba(212, 233, 244, .8);
     border-radius: 6px;
     width: 100%;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.16);
+    box-shadow: 8px 16px 10px rgba(0, 0, 0, 0.2);
 
     p{
       font-size: rem(18);
