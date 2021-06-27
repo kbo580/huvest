@@ -149,6 +149,7 @@ section{
       }
     }
   }
+
 }
 
 @media (min-width: 1025px){
@@ -180,7 +181,7 @@ section{
 /* レスポンシブ用メニュー */
 /* -------------------------------------------- */
 
-/* バーガーアイコン */
+/* バーガーメニュー */
 .burger{
   position: relative;
   cursor: pointer;
@@ -188,38 +189,35 @@ section{
   height:50px;
   border-radius: 5px;
   z-index: 11;
-  // border: 1px solid yellow;
 
   span{
     display: inline-block;
     transition: all .4s;
     position: absolute;
-    left: 14%;
+    left: 14px;
     height: 2px;
     border-radius: 5px;
     background: #fff;
-    width: 70%;
-    transform: rotateY(-50%);
+    width: 45%;
 
     &:nth-of-type(1){
-      top:18%;
+      top:13px;
     }
 
     &:nth-of-type(2){
-      top:41%;
+      top:19px;
     }
 
     &:nth-of-type(3){
-      top:64%;
+      top:25px;
       
       &::after{
         content:"Menu";
-        display: block;
         position: absolute;
         top:5px;
-        left: 0%;
+        left: -5px;
         color: #fff;
-        font-size: 70%;
+        font-size: rem(6);
         text-transform: uppercase;
       }
     }
@@ -227,10 +225,10 @@ section{
 
   /* クリック後の動き */
   &.active span:nth-of-type(1) {
-    top: 30%;
-    left: 14%;
+    top: 14px;
+    left: 18px;
     transform: translateY(6px) rotate(-45deg);
-    width: 70%;
+    width: 30%;
   }
   
   &.active span:nth-of-type(2) {
@@ -238,17 +236,17 @@ section{
   }
 
   &.active span:nth-of-type(3){
-    top: 53%;
-    left: 14%;
+    top: 26px;
+    left: 18px;
     transform: translateY(-6px) rotate(45deg);
-    width: 70%;
+    width: 30%;
   }
 
   &.active span:nth-of-type(3)::after {
     content:"Close";
     transform: translateY(0) rotate(-45deg);
-    top:7px;
-    left:40%;
+    top:5px;
+    left:0px;
   }
 }
 
@@ -258,13 +256,12 @@ section{
   color: #fff;
   background-color: rgba( 0, 0, 0, 0.8);
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 120%;
-  height: 100%;
+  min-height: 100%;
   z-index: 10;
   transition: all .4s;
-  overflow-y: scroll;
 
   ul{
     li{
@@ -326,56 +323,16 @@ section{
 
   /* バーガーアイコン */
   .burger{
-    width: 70px;
-    height:70px;
-  
-    span{
-  
-      &:nth-of-type(3){
-        
-        &::after{
-        left: 4%;
-        font-size: 80%;
-        }
-      }
-    }
-  
-    /* クリック後の動き */
-  
-    &.active span:nth-of-type(3){
-      top: 49%;
-    }
-  
-    &.active span:nth-of-type(3)::after {
-      top: 12px;
-      left: 45%;
-    }
-  }
-
-  /* ハンバーガーメニュー */
-  .sp_nav_wrapper{
-
-    ul{
-      li{
-        a{
-          padding: 40px 16px;
-        }
-      }
-    }
-    p{
-      padding: 24px 0;
-    }
-  }
-
-  /* スマホ用の固定フッター */
-  .sp_fixed_footer_wrapper{
     display: none;
   }
 }
 
 @media (min-width: 1025px){
 
-  
+  /* スマホ用の固定フッター */
+  .sp_fixed_footer_wrapper{
+    display: none;
+  }
 }
 
 /* -------------------------------------------- */
@@ -562,7 +519,6 @@ header{
       border: 1px solid #707070;
       font-size: rem(14);
       height: 40px;
-      background-color: #fff;
 
     }
 
@@ -1493,12 +1449,6 @@ footer{
   }
 }
 
-@media (min-width: 575px){
-  footer{
-    margin-bottom: 0;
-  }
-}
-
 @media (min-width: 800px){
   footer{
     padding: 30px 0;
@@ -1594,7 +1544,7 @@ footer{
   opacity: .6;
   border-radius: 50%;
   position: fixed;
-  bottom: 90px;
+  bottom: 14%;
   right: 0;
 
   a{
@@ -1619,7 +1569,7 @@ footer{
   .to_top{
     width: 60px;
     height: 60px;
-    bottom: 10px;
+    bottom: 10%;
     right: 0;
   
     a{
@@ -1638,6 +1588,8 @@ footer{
   .to_top{
     width: 80px;
     height: 80px;
+    bottom: 0;
+    right: 0;
   
     a{
       font-size: rem(16);
