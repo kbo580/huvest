@@ -61,7 +61,8 @@ body {
   color: $textColorA;
   font-size: rem(18);
   display: block;
-  border: 1px solid #000;
+  border: 1px solid $textColorC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   text-align: center;
   padding: 16px;
@@ -69,11 +70,6 @@ body {
   transition: all .4s;
   width: 80%;
   margin: 0 auto;
-
-  &:hover{
-    background-color: $mainColor;
-    color: #fff;
-  }
 }
 
 .signUp_btn{
@@ -149,7 +145,6 @@ section{
       }
     }
   }
-
 }
 
 @media (min-width: 1025px){
@@ -181,7 +176,7 @@ section{
 /* レスポンシブ用メニュー */
 /* -------------------------------------------- */
 
-/* バーガーメニュー */
+/* バーガーアイコン */
 .burger{
   position: relative;
   cursor: pointer;
@@ -189,35 +184,38 @@ section{
   height:50px;
   border-radius: 5px;
   z-index: 11;
+  // border: 1px solid yellow;
 
   span{
     display: inline-block;
     transition: all .4s;
     position: absolute;
-    left: 14px;
+    left: 14%;
     height: 2px;
     border-radius: 5px;
     background: #fff;
-    width: 45%;
+    width: 70%;
+    transform: rotateY(-50%);
 
     &:nth-of-type(1){
-      top:13px;
+      top:18%;
     }
 
     &:nth-of-type(2){
-      top:19px;
+      top:41%;
     }
 
     &:nth-of-type(3){
-      top:25px;
+      top:64%;
       
       &::after{
         content:"Menu";
+        display: block;
         position: absolute;
         top:5px;
-        left: -5px;
+        left: 0%;
         color: #fff;
-        font-size: rem(6);
+        font-size: 70%;
         text-transform: uppercase;
       }
     }
@@ -225,10 +223,10 @@ section{
 
   /* クリック後の動き */
   &.active span:nth-of-type(1) {
-    top: 14px;
-    left: 18px;
+    top: 30%;
+    left: 14%;
     transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+    width: 70%;
   }
   
   &.active span:nth-of-type(2) {
@@ -236,17 +234,17 @@ section{
   }
 
   &.active span:nth-of-type(3){
-    top: 26px;
-    left: 18px;
+    top: 53%;
+    left: 14%;
     transform: translateY(-6px) rotate(45deg);
-    width: 30%;
+    width: 70%;
   }
 
   &.active span:nth-of-type(3)::after {
     content:"Close";
     transform: translateY(0) rotate(-45deg);
-    top:5px;
-    left:0px;
+    top:7px;
+    left:40%;
   }
 }
 
@@ -256,12 +254,13 @@ section{
   color: #fff;
   background-color: rgba( 0, 0, 0, 0.8);
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 120%;
-  min-height: 100%;
+  height: 100%;
   z-index: 10;
   transition: all .4s;
+  overflow-y: scroll;
 
   ul{
     li{
@@ -323,16 +322,58 @@ section{
 
   /* バーガーアイコン */
   .burger{
-    display: none;
+    width: 70px;
+    height:70px;
+  
+    span{
+  
+      &:nth-of-type(3){
+        
+        &::after{
+        left: 4%;
+        font-size: 80%;
+        }
+      }
+    }
+  
+    /* クリック後の動き */
+  
+    &.active span:nth-of-type(3){
+      top: 49%;
+    }
+  
+    &.active span:nth-of-type(3)::after {
+      top: 12px;
+      left: 45%;
+    }
   }
-}
 
-@media (min-width: 1025px){
+  /* ハンバーガーメニュー */
+  .sp_nav_wrapper{
+
+    ul{
+      li{
+        a{
+          padding: 40px 16px;
+        }
+      }
+    }
+    p{
+      padding: 24px 0;
+    }
+  }
 
   /* スマホ用の固定フッター */
   .sp_fixed_footer_wrapper{
     display: none;
   }
+}
+
+@media (min-width: 1025px){
+.sp_nav_wrapper{
+  display: none;
+}
+  
 }
 
 /* -------------------------------------------- */
@@ -519,6 +560,7 @@ header{
       border: 1px solid #707070;
       font-size: rem(14);
       height: 40px;
+      background-color: #fff;
 
     }
 
@@ -622,7 +664,7 @@ header{
   background-color: #000;;
   width: 100%;
   height: 100%;
-  padding: 24px;
+  padding: 36px 24px;
   top: 0;
   left: 0;
   position: fixed;
@@ -630,55 +672,58 @@ header{
   z-index: 100;
   overflow-y: scroll;
 
+  /* 閉じるボタン */
+  #close{
+    color: #fff;
+    position: absolute;
+    top: 2%;
+    right: 6%;
+    font-size: rem(26);
+    line-height: 1;
+  }
+
   /* 日本地図 */
   .japan_map{
     position: absolute;
     width: 100%;
+    max-width: 820px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: .4;
     z-index: -1;
+
     img{
       width: 100%;
-      max-width: 1000px;
-      max-height: 870px;
       object-fit: cover;
     }
   }
 
   .area_wrapper{
     position: relative;
-    .fas{
+
+    .area{
+      margin-bottom: 10px;
       color: #fff;
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: rem(26);
-    }
-  }
-
-  .area{
-    margin-bottom: 10px;
-    color: #fff;
-
-    .area_title{
-      font-size: rem(18);
-      margin-bottom: 16px;
-      line-height: 1;
-    }
-
-    ul{
-      display: flex;
-      flex-wrap: wrap;
-
-      li{
-        margin-right: 10px;
-        margin-bottom: 10px;
-        font-size: rem(14);
-
-        &:hover{
-          cursor: pointer;
+  
+      .area_title{
+        font-size: rem(18);
+        margin-bottom: 16px;
+        line-height: 1;
+      }
+  
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+  
+        li{
+          margin-right: 16px;
+          margin-bottom: 10px;
+          font-size: rem(14);
+  
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
     }
@@ -689,12 +734,17 @@ header{
 @media (min-width: 575px){
   .mv{
     padding: 48px 0;
+
+    .inner{
+      display: flex;
+      justify-content: center;
+      height: 100%;
+    }
   
     /* 検索スペース */
     .search_wrapper{
       padding: 24px;
       max-width: 600px;
-      margin: 0 auto;
   
       p{
         font-size: rem(24);
@@ -755,32 +805,31 @@ header{
 
   /* 地域のモーダル */
   .map{
-    padding: 32px;
+    padding: 48px 36px;
 
-    .area_wrapper{
-      .fas{
-        color: #fff;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: rem(26);
-      }
+     /* 閉じるボタン */
+    #close{
+      top: 2%;
+      right: 4%;
+      font-size: rem(28);
     }
 
-    .area{
-      margin-bottom: 10px;
-      color: #fff;
-
-      .area_title{
-        font-size: rem(20);
-        margin-bottom: 16px;
-      }
-
-      ul{
-        li{
-          margin-right: 16px;
-          margin-bottom: 16px;
-          font-size: rem(16);
+    .area_wrapper{
+      
+      .area{
+        margin-bottom: 24px;
+  
+        .area_title{
+          font-size: rem(20);
+          margin-bottom: 24px;
+        }
+  
+        ul{
+          li{
+            margin-right: 24px;
+            margin-bottom: 16px;
+            font-size: rem(16);
+          }
         }
       }
     }
@@ -790,26 +839,29 @@ header{
 @media (min-width: 1025px){
 
   .mv{
-    padding: 48px 0;
     background: url(../images/pc_mv.png) center / cover no-repeat;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     height: 800px;
-    position: relative;
-  
-    /* 検索スペース */
-    .search_wrapper{
-      padding: 24px;
-      max-width: 600px;
-      margin: auto;
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      transform: translateY(-50%);
 
-      .map{
-        position: absolute;
-        height: 100%;
-        width: 100%;
+    .inner{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .map{
+
+    /* 閉じるボタン */
+    #close{
+      top: 2%;
+      right: 4%;
+    }
+
+    .area_wrapper{
+      .area{
+        width: 1000px;
+        margin: 32px auto;
       }
     }
   }
@@ -902,6 +954,9 @@ header{
 
         .btn{
           margin-top: 32px;
+          &:hover{
+            opacity: .6;
+          }
         }
       }
     }
@@ -1061,6 +1116,9 @@ header{
 
   .btn{
     margin: 32px auto;
+    &:hover{
+      opacity: .6;
+    }
   }
 }
 
@@ -1206,11 +1264,6 @@ header{
   }
 }
 
-@media (min-width: 575px){
-  
-
-}
-
 @media (min-width: 1025px){
 
   .interview{
@@ -1253,7 +1306,7 @@ header{
       margin-bottom: 16px;
 
       p{
-        padding: 3% 0 3% 50px;
+        padding: 3% 5% 3% 50px;
       }
 
       .q{
@@ -1295,6 +1348,23 @@ header{
       .answer{
         background: $subColor;
         display: none;
+
+        span{
+          display: block;
+
+          &:first-child{
+            margin-bottom: 10px;
+          }
+        }
+
+        .contact{
+          font-weight: bold;
+          font-size: rem(16);
+          margin-bottom: 10px;
+        }
+        .attention{
+          font-size: rem(12);
+        }
       }
     }
   }
@@ -1319,65 +1389,27 @@ header{
 
   .question{
     .faq_wrapper{
-      width: 100%;
       margin-bottom: 40px;
-  
+
       li{
-        border: 1px solid #ddd;
-        margin-bottom: 16px;
-  
-        p{
-          padding: 3% 0 3% 50px;
-        }
-  
-        .q{
-          position: relative;
-          cursor: pointer;
-          
-          &::after,
-          &::before{
-            position: absolute;
-            content: "";
-            display: inline-block;
-            width: 15px;
-            height: 2px;
-            background-color: $textColorA;
-            transition: all .3s ease;
-            }
-  
-          &::before{
-            top: 48%;
-            left: 15px;
-            transform: rotate(0deg);
-          }
-  
-          &::after{    
-            top: 48%;
-            left: 15px;
-            transform: rotate(90deg);
-          }
-  
-          &.close::before{
-            transform: rotate(45deg);
-          }
-          
-          &.close::after{
-            transform: rotate(-45deg);
-          }
-        }
-  
         .answer{
-          background: $subColor;
-          display: none;
+  
+          span{
+  
+            &:first-child{
+              margin-bottom: 16px;
+            }
+          }
+  
+          .contact{
+            font-size: rem(18);
+            margin-bottom: 16px;
+          }
+          .attention{
+            font-size: rem(14);
+          }
         }
       }
-    }
-  
-    .guide{
-      text-align: center;
-      font-size: rem(20);
-      font-weight: bold;
-      margin-bottom: 10px;
     }
   }
 }
@@ -1387,6 +1419,10 @@ header{
   .question{
     .faq_wrapper{
       margin-bottom: 64px;
+
+      li{
+        margin-bottom: 32px;
+      }
     }
     .signUp_btn{
       width: 30%;
@@ -1446,6 +1482,12 @@ footer{
 
   .pc_only_footer_wrapper{
     display: none;
+  }
+}
+
+@media (min-width: 575px){
+  footer{
+    margin-bottom: 0;
   }
 }
 
@@ -1544,7 +1586,7 @@ footer{
   opacity: .6;
   border-radius: 50%;
   position: fixed;
-  bottom: 14%;
+  bottom: 90px;
   right: 0;
 
   a{
@@ -1569,7 +1611,7 @@ footer{
   .to_top{
     width: 60px;
     height: 60px;
-    bottom: 10%;
+    bottom: 10px;
     right: 0;
   
     a{
@@ -1588,8 +1630,6 @@ footer{
   .to_top{
     width: 80px;
     height: 80px;
-    bottom: 0;
-    right: 0;
   
     a{
       font-size: rem(16);

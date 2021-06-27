@@ -21,7 +21,8 @@ $(function(){
   });
 
 
-  /* スクロール関係 */
+  // スクロール関係
+  // topへ戻るボタン
   $('#to_top').hide();
     $(window).scroll(function(){
     if($(this).scrollTop()>600){
@@ -38,7 +39,7 @@ $(function(){
   });
 
 
-
+// メニューをクリックするとスクロール
   $('#header_nav ul li a').click(function(){
     var href =$(this).attr('href');
     var position = $(href).offset().top;
@@ -73,6 +74,19 @@ $(function(){
     $('#sp_nav_wrapper').removeClass('active');
     $('body,html').css('overflow', 'visible');
   });
+
+  // サイズを変えた時にハンバーガーメニューの処理を消す
+  $(window).on('load resize', function(){
+      var w = $(window).width();
+      var x = 1025;
+
+    if (w <= x) {
+      $('#burger').removeClass('active');
+      $('#sp_nav_wrapper').removeClass('active')
+      $("html,body").css("overflow", "visible");
+    }
+  });
+
 
   //アコーディオンをクリックした時の動作
   $('.q').on('click', function() {

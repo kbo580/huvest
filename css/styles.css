@@ -49,7 +49,9 @@ body {
   color: #333;
   font-size: 1.125rem;
   display: block;
-  border: 1px solid #000;
+  border: 1px solid #5C5C5C;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   text-align: center;
   padding: 16px;
@@ -58,11 +60,6 @@ body {
   transition: all .4s;
   width: 80%;
   margin: 0 auto;
-}
-
-.btn:hover {
-  background-color: #0068B7;
-  color: #fff;
 }
 
 .signUp_btn {
@@ -163,7 +160,7 @@ section:nth-of-type(even) {
 /* -------------------------------------------- */
 /* レスポンシブ用メニュー */
 /* -------------------------------------------- */
-/* バーガーメニュー */
+/* バーガーアイコン */
 .burger {
   position: relative;
   cursor: pointer;
@@ -179,41 +176,44 @@ section:nth-of-type(even) {
   -webkit-transition: all .4s;
   transition: all .4s;
   position: absolute;
-  left: 14px;
+  left: 14%;
   height: 2px;
   border-radius: 5px;
   background: #fff;
-  width: 45%;
+  width: 70%;
+  -webkit-transform: rotateY(-50%);
+          transform: rotateY(-50%);
 }
 
 .burger span:nth-of-type(1) {
-  top: 13px;
+  top: 18%;
 }
 
 .burger span:nth-of-type(2) {
-  top: 19px;
+  top: 41%;
 }
 
 .burger span:nth-of-type(3) {
-  top: 25px;
+  top: 64%;
 }
 
 .burger span:nth-of-type(3)::after {
   content: "Menu";
+  display: block;
   position: absolute;
   top: 5px;
-  left: -5px;
+  left: 0%;
   color: #fff;
-  font-size: 0.375rem;
+  font-size: 70%;
   text-transform: uppercase;
 }
 
 .burger.active span:nth-of-type(1) {
-  top: 14px;
-  left: 18px;
+  top: 30%;
+  left: 14%;
   -webkit-transform: translateY(6px) rotate(-45deg);
           transform: translateY(6px) rotate(-45deg);
-  width: 30%;
+  width: 70%;
 }
 
 .burger.active span:nth-of-type(2) {
@@ -221,19 +221,19 @@ section:nth-of-type(even) {
 }
 
 .burger.active span:nth-of-type(3) {
-  top: 26px;
-  left: 18px;
+  top: 53%;
+  left: 14%;
   -webkit-transform: translateY(-6px) rotate(45deg);
           transform: translateY(-6px) rotate(45deg);
-  width: 30%;
+  width: 70%;
 }
 
 .burger.active span:nth-of-type(3)::after {
   content: "Close";
   -webkit-transform: translateY(0) rotate(-45deg);
           transform: translateY(0) rotate(-45deg);
-  top: 5px;
-  left: 0px;
+  top: 7px;
+  left: 40%;
 }
 
 /* ハンバーガーメニュー */
@@ -242,13 +242,14 @@ section:nth-of-type(even) {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 120%;
-  min-height: 100%;
+  height: 100%;
   z-index: 10;
   -webkit-transition: all .4s;
   transition: all .4s;
+  overflow-y: scroll;
 }
 
 .sp_nav_wrapper ul li:first-child {
@@ -314,13 +315,36 @@ section:nth-of-type(even) {
 @media (min-width: 575px) {
   /* バーガーアイコン */
   .burger {
+    width: 70px;
+    height: 70px;
+    /* クリック後の動き */
+  }
+  .burger span:nth-of-type(3)::after {
+    left: 4%;
+    font-size: 80%;
+  }
+  .burger.active span:nth-of-type(3) {
+    top: 49%;
+  }
+  .burger.active span:nth-of-type(3)::after {
+    top: 12px;
+    left: 45%;
+  }
+  /* ハンバーガーメニュー */
+  .sp_nav_wrapper ul li a {
+    padding: 40px 16px;
+  }
+  .sp_nav_wrapper p {
+    padding: 24px 0;
+  }
+  /* スマホ用の固定フッター */
+  .sp_fixed_footer_wrapper {
     display: none;
   }
 }
 
 @media (min-width: 1025px) {
-  /* スマホ用の固定フッター */
-  .sp_fixed_footer_wrapper {
+  .sp_nav_wrapper {
     display: none;
   }
 }
@@ -522,6 +546,7 @@ header .pc_header, header .header_nav {
   border: 1px solid #707070;
   font-size: 0.875rem;
   height: 40px;
+  background-color: #fff;
 }
 
 .mv .search_wrapper .search_btn {
@@ -617,19 +642,30 @@ header .pc_header, header .header_nav {
   background-color: #000;
   width: 100%;
   height: 100%;
-  padding: 24px;
+  padding: 36px 24px;
   top: 0;
   left: 0;
   position: fixed;
   display: none;
   z-index: 100;
   overflow-y: scroll;
+  /* 閉じるボタン */
   /* 日本地図 */
+}
+
+.map #close {
+  color: #fff;
+  position: absolute;
+  top: 2%;
+  right: 6%;
+  font-size: 1.625rem;
+  line-height: 1;
 }
 
 .map .japan_map {
   position: absolute;
   width: 100%;
+  max-width: 820px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -640,8 +676,6 @@ header .pc_header, header .header_nav {
 
 .map .japan_map img {
   width: 100%;
-  max-width: 1000px;
-  max-height: 870px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -650,26 +684,18 @@ header .pc_header, header .header_nav {
   position: relative;
 }
 
-.map .area_wrapper .fas {
-  color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 1.625rem;
-}
-
-.map .area {
+.map .area_wrapper .area {
   margin-bottom: 10px;
   color: #fff;
 }
 
-.map .area .area_title {
+.map .area_wrapper .area .area_title {
   font-size: 1.125rem;
   margin-bottom: 16px;
   line-height: 1;
 }
 
-.map .area ul {
+.map .area_wrapper .area ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,13 +703,13 @@ header .pc_header, header .header_nav {
       flex-wrap: wrap;
 }
 
-.map .area ul li {
-  margin-right: 10px;
+.map .area_wrapper .area ul li {
+  margin-right: 16px;
   margin-bottom: 10px;
   font-size: 0.875rem;
 }
 
-.map .area ul li:hover {
+.map .area_wrapper .area ul li:hover {
   cursor: pointer;
 }
 
@@ -692,10 +718,18 @@ header .pc_header, header .header_nav {
     padding: 48px 0;
     /* 検索スペース */
   }
+  .mv .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
   .mv .search_wrapper {
     padding: 24px;
     max-width: 600px;
-    margin: 0 auto;
     /* インプット系パーツ */
     /* 条件入力欄 */
     /* セレクトボックス */
@@ -745,25 +779,23 @@ header .pc_header, header .header_nav {
   }
   /* 地域のモーダル */
   .map {
-    padding: 32px;
+    padding: 48px 36px;
+    /* 閉じるボタン */
   }
-  .map .area_wrapper .fas {
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.625rem;
+  .map #close {
+    top: 2%;
+    right: 4%;
+    font-size: 1.75rem;
   }
-  .map .area {
-    margin-bottom: 10px;
-    color: #fff;
+  .map .area_wrapper .area {
+    margin-bottom: 24px;
   }
-  .map .area .area_title {
+  .map .area_wrapper .area .area_title {
     font-size: 1.25rem;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
-  .map .area ul li {
-    margin-right: 16px;
+  .map .area_wrapper .area ul li {
+    margin-right: 24px;
     margin-bottom: 16px;
     font-size: 1rem;
   }
@@ -771,28 +803,32 @@ header .pc_header, header .header_nav {
 
 @media (min-width: 1025px) {
   .mv {
-    padding: 48px 0;
     background: url(../images/pc_mv.png) center/cover no-repeat;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     height: 800px;
-    position: relative;
-    /* 検索スペース */
   }
-  .mv .search_wrapper {
-    padding: 24px;
-    max-width: 600px;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+  .mv .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .mv .search_wrapper .map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  .map {
+    /* 閉じるボタン */
+  }
+  .map #close {
+    top: 2%;
+    right: 4%;
+  }
+  .map .area_wrapper .area {
+    width: 1000px;
+    margin: 32px auto;
   }
 }
 
@@ -865,6 +901,10 @@ header .pc_header, header .header_nav {
 
 .service .service_item_container .service_item .service_text_wrapper .btn {
   margin-top: 32px;
+}
+
+.service .service_item_container .service_item .service_text_wrapper .btn:hover {
+  opacity: .6;
 }
 
 @media (min-width: 575px) {
@@ -1008,6 +1048,10 @@ header .pc_header, header .header_nav {
 
 .recruit .btn {
   margin: 32px auto;
+}
+
+.recruit .btn:hover {
+  opacity: .6;
 }
 
 .btn_effect::before {
@@ -1186,7 +1230,7 @@ header .pc_header, header .header_nav {
 }
 
 .question .faq_wrapper li p {
-  padding: 3% 0 3% 50px;
+  padding: 3% 5% 3% 50px;
 }
 
 .question .faq_wrapper li .q {
@@ -1234,6 +1278,24 @@ header .pc_header, header .header_nav {
   display: none;
 }
 
+.question .faq_wrapper li .answer span {
+  display: block;
+}
+
+.question .faq_wrapper li .answer span:first-child {
+  margin-bottom: 10px;
+}
+
+.question .faq_wrapper li .answer .contact {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.question .faq_wrapper li .answer .attention {
+  font-size: 0.75rem;
+}
+
 .question .guide {
   text-align: center;
   font-size: 1.25rem;
@@ -1252,65 +1314,26 @@ header .pc_header, header .header_nav {
 
 @media (min-width: 575px) {
   .question .faq_wrapper {
-    width: 100%;
     margin-bottom: 40px;
   }
-  .question .faq_wrapper li {
-    border: 1px solid #ddd;
+  .question .faq_wrapper li .answer span:first-child {
     margin-bottom: 16px;
   }
-  .question .faq_wrapper li p {
-    padding: 3% 0 3% 50px;
+  .question .faq_wrapper li .answer .contact {
+    font-size: 1.125rem;
+    margin-bottom: 16px;
   }
-  .question .faq_wrapper li .q {
-    position: relative;
-    cursor: pointer;
-  }
-  .question .faq_wrapper li .q::after, .question .faq_wrapper li .q::before {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 2px;
-    background-color: #333;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-  .question .faq_wrapper li .q::before {
-    top: 48%;
-    left: 15px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  .question .faq_wrapper li .q::after {
-    top: 48%;
-    left: 15px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  .question .faq_wrapper li .q.close::before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .question .faq_wrapper li .q.close::after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .question .faq_wrapper li .answer {
-    background: #D4E9F4;
-    display: none;
-  }
-  .question .guide {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  .question .faq_wrapper li .answer .attention {
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width: 1025px) {
   .question .faq_wrapper {
     margin-bottom: 64px;
+  }
+  .question .faq_wrapper li {
+    margin-bottom: 32px;
   }
   .question .signUp_btn {
     width: 30%;
@@ -1375,6 +1398,12 @@ footer .copy {
 
 footer .pc_only_footer_wrapper {
   display: none;
+}
+
+@media (min-width: 575px) {
+  footer {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 800px) {
@@ -1463,7 +1492,7 @@ footer .pc_only_footer_wrapper {
   opacity: .6;
   border-radius: 50%;
   position: fixed;
-  bottom: 14%;
+  bottom: 90px;
   right: 0;
 }
 
@@ -1488,7 +1517,7 @@ footer .pc_only_footer_wrapper {
   .to_top {
     width: 60px;
     height: 60px;
-    bottom: 10%;
+    bottom: 10px;
     right: 0;
   }
   .to_top a {
@@ -1503,8 +1532,6 @@ footer .pc_only_footer_wrapper {
   .to_top {
     width: 80px;
     height: 80px;
-    bottom: 0;
-    right: 0;
   }
   .to_top a {
     font-size: 1rem;

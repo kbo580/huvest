@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.scss">
+    <link rel="stylesheet" href="css/styles-re.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="icon" href="images/logo.png">
+    <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
     <title>人材派遣のヒューベスト</title>
   </head>
 
@@ -29,6 +30,112 @@
       </nav>
     </div>
     <!-- ハンバーガーメニューここまで -->
+
+    <!-- 地域のモーダルここから -->
+    <div class="map">
+      <span id="close"><i class="fas fa-times"></i></span> 
+
+      <!-- 地域の選択肢 -->
+      <div class="area_wrapper">
+
+        <!-- 日本地図 -->
+      <div class="japan_map">
+        <img src="images/map.png" alt="">
+      </div>
+        
+        <div class="area area_1">
+          <p class="area_title">北海道・東北</p>
+          <ul>
+            <li>北海道</li>
+            <li>青森県</li>
+            <li>岩手県</li>
+            <li>宮城県</li>
+            <li>秋田県</li>
+            <li>山形県</li>
+            <li>福島県</li>
+          </ul>
+        </div>
+
+        <div class="area area_2">
+          <p class="area_title">関東</p>
+          <ul>
+            <li>茨城県</li>
+            <li>栃木県</li>
+            <li>群馬県</li>
+            <li>埼玉県</li>
+            <li>千葉県</li>
+            <li>東京都</li>
+            <li>神奈川県</li>
+          </ul>
+        </div>
+
+        <div class="area area_3">
+          <p class="area_title">東海・北陸・信越</p>
+          <ul>
+            <li>愛知県</li>
+            <li>岐阜県</li>
+            <li>三重県</li>
+            <li>静岡県</li>
+            <li>山梨県</li>
+            <li>石川県</li>
+            <li>富山県</li>
+            <li>福井県</li>
+            <li>長野県</li>
+            <li>新潟県</li>
+          </ul>
+        </div>
+
+        <div class="area area_4">
+          <p class="area_title">関西</p>
+          <ul>
+            <li>滋賀県</li>
+            <li>京都府</li>
+            <li>大阪府</li>
+            <li>兵庫県</li>
+            <li>奈良県</li>
+            <li>和歌山県</li>
+          </ul>
+        </div>
+
+        <div class="area area_5">
+          <p class="area_title">中国</p>
+          <ul>
+            <li>岡山県</li>
+            <li>広島県</li>
+            <li>鳥取県</li>
+            <li>島根県</li>
+            <li>山口県</li>
+          </ul>
+        </div>
+
+        <div class="area area_6">
+          <p class="area_title">四国</p>
+          <ul>
+            <li>徳島県</li>
+            <li>香川県</li>
+            <li>愛媛県</li>
+            <li>高知県</li>
+          </ul>
+        </div>
+
+        <div class="area area_7">
+          <p class="area_title">九州</p>
+          <ul>
+            <li>福岡県</li>
+            <li>佐賀県</li>
+            <li>長崎県</li>
+            <li>熊本県</li>
+            <li>大分県</li>
+            <li>宮崎県</li>
+            <li>鹿児島県</li>
+            <li>沖縄県</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 地域の選択肢ここまで -->
+
+    </div>
+    <!-- 地域のモーダルここまで -->
 
     <header>
       <!-- スマホ用ヘッダーここから -->
@@ -73,8 +180,6 @@
               
             </div>
             <!-- ボタンの枠 -->
-
-            
 
           </div>
           <!-- /inner -->
@@ -150,111 +255,6 @@
 
             <!-- 地域  -->
             <div class="region" id="pref">地域の選択<i class="fas fa-chevron-down"></i></div>
-
-            <!-- 地域のモーダルここから -->
-            <div class="map">
-
-              <!-- 日本地図 -->
-              <div class="japan_map">
-                <img src="images/map.png" alt="">
-              </div>
-
-              <!-- 地域の選択肢 -->
-              <div class="area_wrapper">
-                <span id="close"><i class="fas fa-times"></i></span> 
-                <div class="area area_1">
-                  <p class="area_title">北海道・東北</p>
-                  <ul>
-                    <li>北海道</li>
-                    <li>青森県</li>
-                    <li>岩手県</li>
-                    <li>宮城県</li>
-                    <li>秋田県</li>
-                    <li>山形県</li>
-                    <li>福島県</li>
-                  </ul>
-                </div>
-    
-                <div class="area area_2">
-                  <p class="area_title">関東</p>
-                  <ul>
-                    <li>茨城県</li>
-                    <li>栃木県</li>
-                    <li>群馬県</li>
-                    <li>埼玉県</li>
-                    <li>千葉県</li>
-                    <li>東京都</li>
-                    <li>神奈川県</li>
-                  </ul>
-                </div>
-    
-                <div class="area area_3">
-                  <p class="area_title">東海・北陸・信越</p>
-                  <ul>
-                    <li>愛知県</li>
-                    <li>岐阜県</li>
-                    <li>三重県</li>
-                    <li>静岡県</li>
-                    <li>山梨県</li>
-                    <li>石川県</li>
-                    <li>富山県</li>
-                    <li>福井県</li>
-                    <li>長野県</li>
-                    <li>新潟県</li>
-                  </ul>
-                </div>
-    
-                <div class="area area_4">
-                  <p class="area_title">関西</p>
-                  <ul>
-                    <li>滋賀県</li>
-                    <li>京都府</li>
-                    <li>大阪府</li>
-                    <li>兵庫県</li>
-                    <li>奈良県</li>
-                    <li>和歌山県</li>
-                  </ul>
-                </div>
-
-                <div class="area area_5">
-                  <p class="area_title">中国</p>
-                  <ul>
-                    <li>岡山県</li>
-                    <li>広島県</li>
-                    <li>鳥取県</li>
-                    <li>島根県</li>
-                    <li>山口県</li>
-                  </ul>
-                </div>
-
-                <div class="area area_6">
-                  <p class="area_title">四国</p>
-                  <ul>
-                    <li>徳島県</li>
-                    <li>香川県</li>
-                    <li>愛媛県</li>
-                    <li>高知県</li>
-                  </ul>
-                </div>
-
-                <div class="area area_7">
-                  <p class="area_title">九州</p>
-                  <ul>
-                    <li>福岡県</li>
-                    <li>佐賀県</li>
-                    <li>長崎県</li>
-                    <li>熊本県</li>
-                    <li>大分県</li>
-                    <li>宮崎県</li>
-                    <li>鹿児島県</li>
-                    <li>沖縄県</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- 地域の選択肢ここまで -->
-
-            </div>
-            <!-- 地域のモーダルここまで -->
 
             <p class="result">検索結果は<input type="text" class="result_area">件です</p>
             <a href="#" class="go_result_btn btn">検索結果へ</a>
@@ -512,6 +512,19 @@
             <li>
               <p class="q">Q.登録したらメールや電話はしてきますか？</p>
               <p class="answer">A.当社からの連絡は規定で一切することはありませんのでご安心ください。<br>逆に会員様からのご相談には全力で答えさせていただきます。</p>
+            </li>
+
+            <!-- 質問4 -->
+            <li>
+              <p class="q">Q.その他、質問したい場合はどうしたら良いですか？</p>
+              <p class="answer">
+                <span>下記の連絡先までお気軽にお問い合わせください。</span>
+                <span><i class="fas fa-phone-alt"></i>お電話の場合はこちら</span>
+                <span class="contact">052-123-4567</span>
+                <span><i class="fas fa-envelope"></i>メールの場合はこちら</span>
+                <span class="contact">abcde@example.co.jp</span>
+                <span class="attention">※平日10:00〜17:00 土日祝日を除く</span>
+              </p>
             </li>
 
           </ul>
